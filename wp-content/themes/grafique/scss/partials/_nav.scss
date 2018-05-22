@@ -1,7 +1,31 @@
 .nav {
-    background: blue;
-    color: white;   
+    display: none;
+    @include min-screen(1024px) { 
+        display: flex;
+        justify-items: flex-end;
+        margin-left: auto;
+    }
+    &__search {
+        color: #ffffff;
+        display: none;
+        @include min-screen(1024px) { 
+            display: block;
+            border-right: 1px solid #ffffff;
+            margin-right: 25px;
+            padding-right: 25px;
+
+        }
+    }
 }
-.link {
-    color: blue;
+
+.nav-link {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ffffff;  
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    &:hover,
+    &:active {
+        color: #27bfe7;
+    }
 }

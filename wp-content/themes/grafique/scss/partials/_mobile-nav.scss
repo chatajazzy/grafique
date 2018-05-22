@@ -1,0 +1,34 @@
+.mobile-nav {
+    background: #000000;
+    &__search {
+        color: #ffffff;
+        font-size: 14px;
+    }
+    @include min-screen(1024px) { 
+      display: none;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+
+    }
+    &__trigger {
+      // height: 45px;
+      // width: 45px;
+      border: 0;
+      background-color: transparent;
+  }
+  &__bar {
+      background: #ffffff;
+      border-radius: 3px;
+      display: block;
+      height: 2px;
+      padding: 0;
+      position: relative;
+      transition: all 0.2s ease;
+      width: 25px;
+      margin: 5px auto; 
+  }
+}

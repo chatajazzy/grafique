@@ -1,0 +1,30 @@
+
+.socials {
+  display: flex;  
+  justify-content: space-between;
+  width: 100%;
+  max-width: 90px;
+  margin: 25px auto;
+  @include min-screen(1024px) { 
+      display: none;
+  }
+  &--desktop {
+      display: none;
+      @include min-screen(1024px) { 
+          display: flex;
+          max-width: 90px;
+          margin: 0;
+
+      }
+  }
+  .fab {
+      color: #ffffff;
+      font-size: 1rem;
+      transition: all 0.3s ease-in-out;
+      &:hover,
+      &:active {
+          color: #27bfe7;
+          cursor: pointer;
+      }
+  }
+}

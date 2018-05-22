@@ -1,0 +1,76 @@
+extends:
+  - eslint:recommended
+  - idiomatic
+
+env:
+  browser: true
+  es6: true
+  amd: true
+
+rules:
+  array-bracket-spacing: 0
+  brace-style:
+    - 2
+    - 'stroustrup'
+    -
+      allowSingleLine: false
+  computed-property-spacing: 0
+  func-names: 0
+  indent:
+    - 2
+    - 2
+    -
+      VariableDeclarator:
+        var: 2
+        let: 2
+        const: 3
+  key-spacing: 0
+  no-inline-comments: 0
+  no-multi-spaces: 0
+  space-in-parens: 0
+  vars-on-top: 0
+
+globals:
+  $: true
+  $$: true
+  $break: true
+  $j: true
+  ajaxForgotpasswordUrl: true
+  ajaxLoginUrl: true
+  baseCategoryUrl: true
+  baseCategoryUrlPage: true
+  checkEmailUrl: true
+  checkGender: true
+  Class: true
+  ConfigurableMediaImages: true
+  currentCurrencyCode: true
+  customerHasAddresses: true
+  defaultCountryCode: true
+  domReady: true
+  google: true
+  IEVersion: true
+  isValidNumber: true
+  jQuery: false
+  JustFilter: true
+  Modernizr: true
+  optionsPrice: true
+  pickupPointUrl: true
+  PointerManager: true
+  popupLoginWindowClose: true
+  popupLoginWindowOpen: true
+  Product: true
+  productAddToCartForm: true
+  productData: true
+  ProductMediaManager: true
+  productType: true
+  saveBillingUrl: true
+  selectPlaceholderText: true
+  setMethodsSeparateUrl: true
+  simpleProductStockQty: true
+  sliderMaxValue: true
+  spConfig: true
+  specialChars: true
+  threesixty: true
+  Translator: true
+  VarienForm: true
+  wNumb: true

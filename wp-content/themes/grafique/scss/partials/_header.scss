@@ -1,0 +1,12 @@
+.header {
+    background-color: #19191a;
+    .container {
+      @include min-screen(1024px) { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+    }
+}
+
