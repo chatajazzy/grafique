@@ -28,6 +28,16 @@ img {
     max-width: 100%;
 }
 
+a {
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+    &:visited {
+        color: $white;
+    }
+}
+
 .baguetteBox-button#next-button,
 .baguetteBox-button#previous-button {
     outline: none;

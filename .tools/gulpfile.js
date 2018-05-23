@@ -31,7 +31,7 @@ const processors = [
 ];
 
 const paths = {
-    template: '../*.html',
+    template: '../wp-content/themes/grafique/**',
     sass: '../wp-content/themes/grafique/scss',
     css: '../wp-content/themes/grafique/css',
 };
