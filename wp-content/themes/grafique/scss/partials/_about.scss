@@ -1,0 +1,36 @@
+.about {
+    &__welcome-box {
+        margin-right: 90px;
+    }
+    @include min-screen(1024px) {
+        padding-bottom: 200px;
+    }
+    &__photos {
+        @include min-screen(768px) {
+            position: relative;
+            top: 15px;
+        }
+    }
+    &__photo {
+        display: block;
+        margin: 0 auto 15px;
+        @include min-screen(768px) {
+            position: absolute;
+        }
+        &--back {
+            @include min-screen(768px) {
+                z-index: 1;
+                padding-left: 15%;
+            }
+        }
+        &--front {
+            @include min-screen(768px) {
+                z-index: 2;
+                top: 35%;
+            }
+            @include min-screen(1024px) {
+                top: 50%;
+            }
+        }
+    }
+}

@@ -20,90 +20,192 @@ require( dirname( __FILE__ ) . '/wp-blog-header.php' ); -->
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Static Grafique</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Grafique</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
-  <link rel="stylesheet" href="wp-content/themes/grafique/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600,800" rel="stylesheet">
+    <link rel="stylesheet" href="wp-content/themes/grafique/css/styles.css">
 </head>
 
 <body>
-  <header class="header">
-      <div class="mobile-nav">
+    <header class="header">
+        <div class="mobile-nav">
+            <div class="container">
+
+                <button class="mobile-nav__trigger">
+                    <span class="mobile-nav__bar"></span>
+                    <span class="mobile-nav__bar"></span>
+                    <span class="mobile-nav__bar"></span>
+                </button>
+                <div class="mobile-nav__search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
         <div class="container">
 
-          <button class="mobile-nav__trigger">
-            <span class="mobile-nav__bar"></span>
-            <span class="mobile-nav__bar"></span>
-            <span class="mobile-nav__bar"></span>
-          </button>
-          <div class="mobile-nav__search">
-              <i class="fas fa-search"></i>
-          </div>
-        </div>
-      </div>
-      <div class="container">
 
+            <div class="logo">
+                <a href="#" class="logo__link">
+                    <img src="/img/invert-logo.png" alt="Grafique logo" class="logo__img">
+                </a>
+                <span class="logo__text">Architect</span>
+                <ul class="socials">
+                    <li class="socials__item">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
 
-        <div class="logo">
-          <a href="#" class="logo__link">
-            <img src="/img/invert-logo.png" alt="Grafique logo" class="logo__img">
-          </a>
-          <span class="logo__text">Architect</span>
-          <ul class="socials">
-              <li class="socials__item"><a href="#"><i class="fab fa-facebook-f"></i></a>
-    
-              </li>
-              <li class="socials__item"><a href="#"><i class="fab fa-twitter"></i></a>
-    
-              </li>
-              <li class="socials__item"><a href="#"><i class="fab fa-instagram"></i></a>
-    
-              </li>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                    </li>
+                    <li class="socials__item">
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <nav class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Our team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </nav>
+            <div class="nav__search">
+                <i class="fas fa-search"></i>
+
+            </div>
+            <ul class="socials socials--desktop">
+                <li class="socials__item">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
             </ul>
         </div>
-        <nav class="nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Our team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-        </nav>
-        <div class="nav__search">
-            <i class="fas fa-search"></i>
-
-          </div>
-        <ul class="socials socials--desktop">
-            <li class="socials__item"><a href="#"><i class="fab fa-facebook-f"></i></a>
-  
-            </li>
-            <li class="socials__item"><a href="#"><i class="fab fa-twitter"></i></a>
-  
-            </li>
-            <li class="socials__item"><a href="#"><i class="fab fa-instagram"></i></a>
-  
-            </li>
-          </ul>
-      </div>
-  </header>
+    </header>
+    <div class="hero">slider here</div>
+    <section class="section intro">
+        <div class="container">
+            <div class="intro__years-box">
+                <p class="intro__years-box-title">19</p>
+                <p class="intro__years-box-title2">Years</p>
+                <p class="intro__years-box-title3">of experience</p>
+            </div>
+            <div class="intro__welcome">
+                <header>
+                    <h2 class="section__header section__header--intro">Welcome!</h2>
+                </header>
+                <div class="intro__welcome-container">
+                    <div class="intro__welcome-box">
+                        <p class="section__subtitle">Secret of success</p>
+                        <p class="section__subtitle section__subtitle--bold">of our projects</p>
+                    </div>
+                    <p class="section__text section__text--intro">
+                        Since 1987 I was involved in thousands of commercial projects, doing the design of skyscrapers, creating retail and commercial
+                        interiors and corporate marketing centers. An equally important aspect of my work is single and family
+                        residential design. The award winning practice is published in professional and shelter publications
+                        and widely recognized for design. Today I am a successful architect ready to do work.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <header>
+                        <h2 class="section__header">Why us</h2>
+                    </header>
+                    <div class="about__welcome-box">
+                        <p class="section__subtitle">Add the most</p>
+                        <p class="section__subtitle section__subtitle--bold">Bold projects</p>
+                        <p class="section__text">
+                            Among many of my great projects there are some that occupy special places in my portfolio. There are lots of beautiful pieces
+                            created for the large families to become ancestral homes for the people who love art and architecture
+                            and value creativity in this hard and non-sophisticated world of today.</p>
+                    </div>
+                </div>
+                <div class="about__photos col-sm-12 col-md-6">
+                    <img class="about__photo about__photo--back" src="wp-content/themes/grafique/img/about-photo1.jpg" alt="cos">
+                    <img class="about__photo about__photo--front" src="wp-content/themes/grafique/img/about-photo2.jpg" alt="cos">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section achievements">
+        <header class="text-center">
+            <h2 class="section__header">Achievements</h2>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="achievements__item">
+                        <p class="achievements__item-number">185</p>
+                        <p class="achievements__item-text">Projects</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="achievements__item">
+                        <p class="achievements__item-number">17</p>
+                        <p class="achievements__item-text">Employess</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="achievements__item">
+                        <p class="achievements__item-number">39</p>
+                        <p class="achievements__item-text">Contractors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team">
+        <div class="container">
+            <header>
+                <h2 class="section__header">Team</h2>
+            </header>
+        </div>
+    </section>
 </body>
 
 </html>
