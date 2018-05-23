@@ -1,4 +1,7 @@
 .contact {
+    &__map {
+        min-height: 450px;
+    }
     &__link,
     &__text {
         padding-left: 25px;
