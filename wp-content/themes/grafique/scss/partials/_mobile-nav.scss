@@ -1,5 +1,26 @@
 .mobile-nav {
     background: $black;
+    position: relative;
+    &--is-open {
+        .mobile-nav__trigger {
+            color: red;
+            outline: none;
+        }
+        .mobile-nav__bar {
+            background: $blue;
+            &:nth-child(1) {
+                transform: rotate3d(0, 0, 1, 45deg);
+                top: 20px;
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                transform: rotate3d(0, 0, 1, -45deg);
+                top: 20px;
+            }
+        }
+    }
     &__search {
         color: $white;
         font-size: 14px;
@@ -23,9 +44,15 @@
         display: block;
         height: 2px;
         padding: 0;
-        position: relative;
+        position: absolute;
         transition: all 0.2s ease;
         width: 25px;
         margin: 5px auto;
+        &:nth-child(1) {
+            top: 12px;
+        }
+        &:nth-child(2) {
+            top: 19px;
+        }
     }
 }

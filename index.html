@@ -42,7 +42,6 @@ require( dirname( __FILE__ ) . '/wp-blog-header.php' ); -->
     <header class="header">
         <div class="mobile-nav">
             <div class="container">
-
                 <button class="mobile-nav__trigger">
                     <span class="mobile-nav__bar"></span>
                     <span class="mobile-nav__bar"></span>
@@ -52,6 +51,28 @@ require( dirname( __FILE__ ) . '/wp-blog-header.php' ); -->
                     <i class="fas fa-search"></i>
                 </div>
             </div>
+            <nav class="nav nav--mobile-menu">
+                <div class="container">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Our team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </div>
+            </nav>
         </div>
         <div class="container">
             <div class="header__content">
@@ -164,7 +185,6 @@ require( dirname( __FILE__ ) . '/wp-blog-header.php' ); -->
                 </div>
             </div>
             <div class="hero__item">
-
                 <img src="wp-content/themes/grafique/img/architect-slider-4.jpg" alt="" class="hero__img">
                 <div class="container">
                     <div class="hero__text-box">
@@ -641,6 +661,11 @@ require( dirname( __FILE__ ) . '/wp-blog-header.php' ); -->
                 "captions": false,
                 "async": true
             });
+            document.querySelector('.mobile-nav__trigger').addEventListener('click',
+                function () {
+                    document.querySelector('.mobile-nav').classList.toggle('mobile-nav--is-open');
+                }, false);
+
         }
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

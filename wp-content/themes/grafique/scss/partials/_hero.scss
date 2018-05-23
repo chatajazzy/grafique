@@ -1,8 +1,9 @@
 .hero {
     position: relative;
+    max-height: 100vh;
     .tns-nav {
         position: absolute;
-        top: 80%; // max-width: 1200px;
+        top: 80%;
         margin: auto;
         z-index: 2;
         button {
@@ -44,7 +45,7 @@
         flex-wrap: nowrap;
         position: absolute;
         bottom: 50px;
-        z-index: 2;
+        z-index: 1;
         align-items: center;
     }
     &__nav-item {
