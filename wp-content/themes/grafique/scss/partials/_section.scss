@@ -1,0 +1,44 @@
+.section {
+    margin: 100px 0;
+    &__header {
+        text-transform: uppercase;
+        color: rgba(27, 31, 41, 0.3);
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 14px;
+        margin-bottom: 55px;
+        @include min-screen(1024px) {
+            letter-spacing: 32.6px;
+        }
+        &--intro {
+            @include min-screen(1024px) {
+                margin: 25px 0 55px 10%;
+            }
+        }
+    }
+    &__text {
+        color: #909295;
+        font-size: 16px;
+        font-weight: 300;
+        &--intro {
+            @include min-screen(768px) {
+                flex: 1;
+            }
+        }
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: 50px;
+        line-height: 1.13em;
+        color: #1b1f29;
+        font-weight: 200;
+        margin: 0;
+        @include min-screen(1024px) {
+            line-height: 1em;
+        }
+        &--bold {
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+    }
+}
