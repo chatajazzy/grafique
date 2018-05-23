@@ -39,6 +39,10 @@
         &--bold {
             font-weight: 800;
             margin-bottom: 20px;
+            font-size: 30px;
+            @include min-screen(1200px) {
+                font-size: 50px;
+            }
         }
     }
 }

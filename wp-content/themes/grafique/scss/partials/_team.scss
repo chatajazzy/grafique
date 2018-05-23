@@ -1,0 +1,18 @@
+.team {
+    &__member-name {
+        line-height: 1.2em;
+        color: #1b1f29;
+        font-size: 26px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 25px 0;
+    }
+    &__member-bio {
+        color: #909295;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    &__member-lastname {
+        font-weight: 600;
+    }
+}
