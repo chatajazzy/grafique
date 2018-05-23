@@ -2,7 +2,7 @@
     .container {
         display: flex;
         flex-wrap: wrap;
-        @include min-screen(1024px) {
+        @include min-screen($bp-l) {
             flex-wrap: nowrap;
         }
     }
@@ -12,7 +12,7 @@
         margin: 25px auto;
         text-align: center;
         padding: 20px;
-        @include min-screen(1024px) {
+        @include min-screen($bp-l) {
             flex: 1;
             max-width: 250px;
         }
@@ -39,22 +39,22 @@
         margin: -15px 0 20px 0;
     }
     &__welcome {
-        @include min-screen(1024px) {
+        @include min-screen($bp-l) {
             flex: 3;
         }
     }
     &__welcome-container {
         display: flex;
         flex-wrap: wrap;
-        @include min-screen(768px) {
+        @include min-screen($bp-m) {
             flex-wrap: nowrap;
         }
     }
     &__welcome-box {
-        @include min-screen(768px) {
+        @include min-screen($bp-m) {
             flex: 1;
         }
-        @include min-screen(1024px) {
+        @include min-screen($bp-l) {
             min-width: 300px;
             margin: 0 10%;
         }

@@ -1,0 +1,23 @@
+.footer {
+    background-color: $black;
+    padding: 20px;
+    .row {
+        &:last-of-type {
+            border-top: 1px solid $light-gray;
+        }
+    }
+    &__copyright {
+        font-weight: 400;
+        font-size: 14px;
+        color: $light-gray;
+        padding: 10px 0 0 0;
+    }
+    &__copyright-link {
+        color: $blue;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:active {
+            color: $white;
+        }
+    }
+}

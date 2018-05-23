@@ -1,30 +1,37 @@
-
 .socials {
-  display: flex;  
-  justify-content: space-between;
-  width: 100%;
-  max-width: 90px;
-  margin: 25px auto;
-  @include min-screen(1024px) { 
-      display: none;
-  }
-  &--desktop {
-      display: none;
-      @include min-screen(1024px) { 
-          display: flex;
-          max-width: 90px;
-          margin: 0;
-
-      }
-  }
-  .fab {
-      color: #ffffff;
-      font-size: 1rem;
-      transition: all 0.3s ease-in-out;
-      &:hover,
-      &:active {
-          color: #27bfe7;
-          cursor: pointer;
-      }
-  }
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 90px;
+    margin: 25px auto;
+    @include min-screen($bp-l) {
+        display: none;
+    }
+    &--desktop {
+        display: none;
+        @include min-screen($bp-l) {
+            display: flex;
+            max-width: 90px;
+            margin: 0;
+        }
+    }
+    &--footer {
+        display: flex;
+        max-width: 90px;
+        margin: 0;
+        padding-right: 0;
+    }
+    .fab {
+        color: $white;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:active {
+            color: $blue;
+            cursor: pointer;
+        }
+        &--footer {
+            color: $light-gray;
+        }
+    }
 }

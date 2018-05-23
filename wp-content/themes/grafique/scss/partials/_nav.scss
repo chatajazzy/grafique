@@ -1,19 +1,18 @@
 .nav {
     display: none;
-    @include min-screen(1024px) { 
+    @include min-screen($bp-l) {
         display: flex;
         justify-items: flex-end;
         margin-left: auto;
     }
     &__search {
-        color: #ffffff;
+        color: $white;
         display: none;
-        @include min-screen(1024px) { 
+        @include min-screen($bp-l) {
             display: block;
-            border-right: 1px solid #ffffff;
+            border-right: 1px solid $white;
             margin-right: 25px;
             padding-right: 25px;
-
         }
     }
 }
@@ -21,11 +20,11 @@
 .nav-link {
     font-size: 14px;
     line-height: 1.6;
-    color: #ffffff;  
+    color: $white;
     transition: all 0.3s ease-in-out;
     font-weight: 600;
     &:hover,
     &:active {
-        color: #27bfe7;
+        color: $blue;
     }
 }

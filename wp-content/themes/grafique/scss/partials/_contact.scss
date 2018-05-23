@@ -2,7 +2,7 @@
     &__link,
     &__text {
         padding-left: 25px;
-        color: #909295;
+        color: $light-gray2;
         font-size: 16px;
         font-weight: 300;
     }
@@ -19,7 +19,7 @@
         }
         &--mail {
             margin-top: 25px;
-            color: #27bfe7;
+            color: $blue;
         }
     }
     &__form {
@@ -44,7 +44,7 @@
     }
     &__form-submit {
         background-color: #1b1f29;
-        color: #ffffff;
+        color: $white;
         text-decoration: none;
         border: 2px solid #1b1f29;
         font-size: 14px;
@@ -57,7 +57,7 @@
         transform: translateX(-50%);
         &:hover,
         &:active {
-            background-color: #ffffff;
+            background-color: $white;
             color: #1b1f29;
         }
     }

@@ -1,12 +1,18 @@
 .header {
-    background-color: #19191a;
+    background-color: $black;
     .container {
-      @include min-screen(1024px) { 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
+        @include min-screen($bp-l) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
     }
+    &__content {
+        padding: 20px;
+        @include min-screen($bp-l) {
+            display: flex;
+            align-items: center;
+        }
     }
 }
-

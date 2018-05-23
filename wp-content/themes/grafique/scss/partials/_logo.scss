@@ -1,27 +1,36 @@
 .logo {
-  padding: 20px;
-  @include min-screen(1024px) { 
-    display: flex;
-    align-items: center;
-}
-  &__link,
-  &__text {
-    display: block;
-    text-align: center;
-  }
-  &__link {
-    margin: 25px 0 15px;
-   @include min-screen(1024px) { 
-      margin: 20px 0;
-  }
-  }
-  &__text {
-    color: #ffffff;
-    font-size: 14px;
-    @include min-screen(1024px) { 
-      border-left: 1px solid #ffffff;
-      margin-left: 25px;
-      padding-left: 25px;
-  }
-  }
+    padding: 20px;
+    @include min-screen($bp-l) {
+        display: flex;
+        align-items: center;
+    }
+    &--footer {
+        padding: 0 0 5px 0;
+    }
+    &__link,
+    &__text {
+        display: block;
+        text-align: center;
+    }
+    &__link {
+        margin: 25px 0 15px;
+        @include min-screen($bp-l) {
+            margin: 20px 0;
+        }
+        &--footer {
+            margin: 5px;
+        }
+    }
+    &__text {
+        color: $white;
+        font-size: 14px;
+        @include min-screen($bp-l) {
+            border-left: 1px solid $white;
+            margin-left: 25px;
+            padding-left: 25px;
+        }
+        &--footer {
+            color: $light-gray;
+        }
+    }
 }
