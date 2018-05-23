@@ -22,4 +22,43 @@
             color: #27bfe7;
         }
     }
+    &__form {
+        margin: 100px 0;
+    }
+    &__form-header {
+        margin-bottom: 50px;
+    }
+    &__form-input,
+    &__form-textarea {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 2px solid #e8e8e8;
+        margin-bottom: 50px;
+        padding-left: 0;
+        &:focus {
+            outline: none;
+            border: 0;
+            border-bottom: 2px solid #1b1f29;
+            box-shadow: none;
+        }
+    }
+    &__form-submit {
+        background-color: #1b1f29;
+        color: #ffffff;
+        text-decoration: none;
+        border: 2px solid #1b1f29;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        border-radius: 0;
+        width: 185px;
+        padding: 15px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        &:hover,
+        &:active {
+            background-color: #ffffff;
+            color: #1b1f29;
+        }
+    }
 }
