@@ -15,86 +15,26 @@ $about_section_subtitle_thin = get_field('about_section_subtitle_thin');
 $about_section_subtitle_bold = get_field('about_section_subtitle_bold');
 $about_image1 = get_field('about_image1');
 $about_image2 = get_field('about_image2');
+
+$team_section_title = get_field('team_section_title');
+$team_section_subtitle_thin = get_field('team_section_subtitle_thin');
+$team_section_subtitle_bold = get_field('team_section_subtitle_bold');
+
+$projects_section_title = get_field('projects_section_title');
+$projects_section_subtitle_thin = get_field('projects_section_subtitle_thin');
+$projects_section_subtitle_bold = get_field('projects_section_subtitle_bold');
+
+$projects = new WP_Query(
+    array(
+        'post_type' => 'projects',
+        'order_by' => 'post_id',
+        'order' => 'ASC',
+    )
+)
 ?>
 
- <div class="hero">
-        <div class="hero-slider">
-            <div class="hero__item">
-                <img src="<?php bloginfo('stylesheet_directory')?>/img/architect-slider-1.jpg" alt="" class="hero__img">
-                <div class="container">
-                    <div class="hero__text-box">
-                        <p class="hero__text">Adam
-                            <strong>Thomson</strong>
-                        </p>
-                        <p class="hero__text">Architect</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__item">
-                <img src="<?php bloginfo('stylesheet_directory')?>/img/architect-slider-2.jpg" alt="" class="hero__img">
-                <div class="container">
-                    <div class="hero__text-box">
-                        <p class="hero__text">Adam
-                            <strong>Thomson</strong>
-                        </p>
-                        <p class="hero__text">Architect</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__item">
-
-                <img src="<?php bloginfo('stylesheet_directory')?>/img/architect-slider-3.jpg" alt="" class="hero__img">
-                <div class="container">
-                    <div class="hero__text-box">
-                        <p class="hero__text">Adam
-                            <strong>Thomson</strong>
-                        </p>
-                        <p class="hero__text">Architect</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__item">
-                <img src="<?php bloginfo('stylesheet_directory')?>/img/architect-slider-4.jpg" alt="" class="hero__img">
-                <div class="container">
-                    <div class="hero__text-box">
-                        <p class="hero__text">Adam
-                            <strong>Thomson</strong>
-                        </p>
-                        <p class="hero__text">Architect</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__item">
-                <img src="<?php bloginfo('stylesheet_directory')?>/img/architect-slider-5.jpg" alt="" class="hero__img">
-                <div class="container">
-                    <div class="hero__text-box">
-                        <p class="hero__text">Adam
-                            <strong>Thomson</strong>
-                        </p>
-                        <p class="hero__text">Architect</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="hero-slider__nav">
-                <div class="hero-slider__nav-item">
-                    <span class="hero-slider__nav-bar"></span>
-                </div>
-                <div class="hero-slider__nav-item">
-                    <span class="hero-slider__nav-bar"></span>
-                </div>
-                <div class="hero-slider__nav-item">
-                    <span class="hero-slider__nav-bar"></span>
-                </div>
-                <div class="hero-slider__nav-item">
-                    <span class="hero-slider__nav-bar"></span>
-                </div>
-                <div class="hero-slider__nav-item">
-                    <span class="hero-slider__nav-bar"></span>
-                </div>
-            </div>
-        </div>
+    <div class="hero">
+        <?php include 'hero-slider.php';?>
     </div>
     <section class="section intro">
         <div class="container">
@@ -180,57 +120,49 @@ $about_image2 = get_field('about_image2');
     </section>
     <section class="projects" id="projects">
         <header class="text-center">
-            <h2 class="section__header">What we do?</h2>
-            <p class="section__subtitle">Our best</p>
-            <p class="section__subtitle section__subtitle--bold">Projects</p>
+            <h2 class="section__header">
+            <?=$projects_section_title?>
+            </h2>
+            <p class="section__subtitle">
+            <?=$projects_section_subtitle_thin?>
+
+            </p>
+            <p class="section__subtitle section__subtitle--bold">
+            <?=$projects_section_subtitle_bold?>
+
+            </p>
         </header>
         <ul class="projects__grid">
-            <div class="row no-gutters">
-                <li class="col-sm-12 col-md-6 col-lg-4 projects__grid-item">
-                    <a href="<?php bloginfo('stylesheet_directory')?>/img/architect-img3.jpg">
-                        <img class="projects__photo" src="<?php bloginfo('stylesheet_directory')?>/img/architect-img3.jpg" alt="cos">
-                    </a>
-                </li>
-                <li class="col-sm-12 col-md-6 col-lg-4 projects__grid-item">
-                    <a href="<?php bloginfo('stylesheet_directory')?>/img/architect-img4.jpg">
-
-                        <img class="projects__photo" src="<?php bloginfo('stylesheet_directory')?>/img/architect-img4.jpg" alt="cos">
-                    </a>
-                </li>
-                <li class="col-sm-12 col-md-6 col-lg-4 projects__grid-item">
-                    <a href="<?php bloginfo('stylesheet_directory')?>/img/architect-img5.jpg">
-                        <img class="projects__photo" src="<?php bloginfo('stylesheet_directory')?>/img/architect-img5.jpg" alt="cos">
-                    </a>
-
-                </li>
-            </div>
-            <div class="row no-gutters">
-                <li class="col-sm-12 col-md-6 col-lg-4 projects__grid-item">
-                    <a href="<?php bloginfo('stylesheet_directory')?>/img/architect-img6.jpg">
-                        <img class="projects__photo" src="<?php bloginfo('stylesheet_directory')?>/img/architect-img6.jpg" alt="cos">
-                    </a>
-
-                </li>
-                <li class="col-sm-12 col-md-6 col-lg-4 projects__grid-item">
-                    <a href="<?php bloginfo('stylesheet_directory')?>/img/architect-img7.jpg">
-                        <img class="projects__photo" src="<?php bloginfo('stylesheet_directory')?>/img/architect-img7.jpg" alt="cos">
-                    </a>
-                </li>
-                <li class="col-sm-12 col-md-6 col-lg-4 projects__grid-item">
-                    <a href="<?php bloginfo('stylesheet_directory')?>/img/architect-img8.jpg">
-                        <img class="projects__photo" src="<?php bloginfo('stylesheet_directory')?>/img/architect-img8.jpg" alt="cos">
-                    </a>
-                </li>
-            </div>
+        <?php $index = 0;?>
+        <?php while ($projects->have_posts()): $projects->the_post()?>
+	            <?php if ($index == 0 || $index == 3): ?>
+	                <div class="row no-gutters">
+	            <?php endif;?>
+            <li class="col-sm-12 col-md-6 col-lg-4 projects__grid-item">
+                <a href="<?=the_post_thumbnail_url()?>">
+                    <img class="projects__photo" src="<?=the_post_thumbnail_url()?>" alt="cos">
+                </a>
+            </li>
+            <?php if ($index == 2 || $index == 5): ?>
+                </div>
+            <?php endif;?>
+            <?php $index++;?>
+        <?php endwhile;?>
         </ul>
     </section>
     <section class="section team" id="team">
         <div class="container">
             <div class="row">
                 <header class="text-sm-center text-md-left col-sm-12 col-md-4">
-                    <h2 class="section__header">Team</h2>
-                    <p class="section__subtitle">Our</p>
-                    <p class="section__subtitle section__subtitle--bold section__subtitle--small">Architects</p>
+                    <h2 class="section__header">
+                        <?=$team_section_title?>
+                    </h2>
+                    <p class="section__subtitle">
+                        <?=$team_section_subtitle_thin?>
+                    </p>
+                    <p class="section__subtitle section__subtitle--bold section__subtitle--small">
+                        <?=$team_section_subtitle_bold?>
+                    </p>
                 </header>
                 <div class="team__member col-sm-12 col-md-4">
                     <img src="<?php bloginfo('stylesheet_directory')?>/img/architect-team1.jpg" alt="architect 2">
