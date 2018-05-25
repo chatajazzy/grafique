@@ -15,9 +15,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css">
-
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory')?>/css/styles.css">
-
 	<?php wp_head();?>
 </head>
 

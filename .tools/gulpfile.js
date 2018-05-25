@@ -32,8 +32,8 @@ const processors = [
 
 const paths = {
     template: '../wp-content/themes/grafique/**',
-    sass: '../wp-content/themes/grafique/scss',
-    css: '../wp-content/themes/grafique/css',
+    sass: '../wp-content/themes/grafique/sass',
+    css: '../wp-content/themes/grafique',
 };
 
 
@@ -137,7 +137,7 @@ gulp.task('sass', () => {
     return developmentStylesHelper(
         [
             paths.sass + '/*.scss',
-            '!' + paths.sass + '/styles.scss'
+            '!' + paths.sass + '/style.scss'
         ],
         paths.css
     );
@@ -177,7 +177,7 @@ gulp.task('watch-css-and-lint', () => {
 gulp.task('css-lint', () => {
     return cssLintHelper([
         paths.css + '/*.css',
-        '!../**/styles.css'
+        '!../**/style.css'
     ]);
 });
 
