@@ -9,51 +9,65 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="col-sm-12 col-md-6 post" id="post-<?php the_ID();?>" <?php post_class();?>>
+<figure class="post-thumbnail">
+                            <a href="<?= esc_url(get_permalink())?>" class="post-thumbnail__link">
+                                <img class="post-thumbnail__img" src="../wp-content/themes/grafique/img/image1.jpg" alt="cos">
+                            </a>
+                        </figure>
 	<header class="entry-header">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
-		if ( 'post' === get_post_type() ) :
-			?>
+if ('post' === get_post_type()):
+?>
+
 			<div class="entry-meta">
-				<?php
-				grafique_posted_on();
-				grafique_posted_by();
-				?>
+				<header class="entry-header entry-meta">
+				<span class="post__comments">
+					<a href="<?= comments_link() ?>" class="post__comments-link">
+					<i class="far fa-comment"></i>
+					<?=comments_number(0, 1, '%')?>				
+				</a>
+			</span>
+                                <span class="post__date">
+																<a href="<?= get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));  ?>" class="post__date-link"><?php the_time('F j, Y') ?></a>
+                                </span>
+                                <span class="posted-by">by
+                                    <a href="<?= get_the_author_link()?>" class="posted-by__author" rel="author"><?=get_the_author_link();?></a>
+                                </span>
+                                <span class="post__cats">in
+                                    <a href="" rel="tag"><?=the_category(', ');?></a>
+                                </span>
+                            </header>
+
 			</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<?php endif;?>
 	</header><!-- .entry-header -->
 
-	<?php grafique_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'grafique' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+<div class="entry-content">
+	<?=the_title('<h3 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h3>')?>
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'grafique' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
+                                <p><?=the_excerpt()?></p>
+                            </div>
 
 	<footer class="entry-footer">
-		<?php grafique_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+                                <div class="entry-footer-bottom">
+                                    <div class="entry-meta-container">
+                                        <span class="post__tags">
+                                            <a href="" rel="tag">
+																							<?=the_tags('', ', ', '')?>
+																						</a>
+                                        </span>
+                                    </div>
+                                    <!-- .entry-meta-container -->
+                                    <div class="post__button-wrap">
+                                        <a href="<?= esc_url(get_permalink())?>"
+                                            class="post__button btn btn-accent-1">Learn more
+                                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- .entry-footer-bottom -->
+                            </footer>
+</article><!-- #post-<?php the_ID();?> -->

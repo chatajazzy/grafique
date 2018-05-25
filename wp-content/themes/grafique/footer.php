@@ -49,11 +49,12 @@
         </div>
 		</footer>
 		
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script>
-    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.helper.ie8.js"></script><![endif]-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script>
+            <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+                
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfrzx3QTPX5VkmDSOfavaVEYRHnu-Ki3s"></script>
     <script>
@@ -246,8 +247,6 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
 
-    </script>
-    <script>
         window.onload = function () {
             var slider = tns({
                 container: '.hero-slider',
@@ -262,22 +261,25 @@
                 "captions": false,
                 "async": true
             });
-            document.querySelector('.mobile-nav__trigger').addEventListener('click',
-                function () {
-                    document.querySelector('.mobile-nav').classList.toggle('mobile-nav--is-open');
-                }, false);
-
         }
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    </script>
+    <script>
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        document.querySelector('.mobile-nav__trigger').addEventListener('click',
+            function () {
+                document.querySelector('.mobile-nav').classList.toggle('mobile-nav--is-open');
+            }, false);
+
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
-
+    });
     </script>
 </body>
 </html>

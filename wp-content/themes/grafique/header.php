@@ -24,7 +24,7 @@
 
 
 <body>
-    <header class="header">
+    <header class="header <?= (is_home() && !is_front_page()) ? 'header--blog' : '' ?>">
         <div class="mobile-nav">
             <div class="container">
                 <button class="mobile-nav__trigger">
