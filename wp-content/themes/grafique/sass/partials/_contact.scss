@@ -41,15 +41,15 @@
         &:focus {
             outline: none;
             border: 0;
-            border-bottom: 2px solid #1b1f29;
+            border-bottom: 2px solid $black2;
             box-shadow: none;
         }
     }
     &__form-submit {
-        background-color: #1b1f29;
+        background-color: $black2;
         color: $white;
         text-decoration: none;
-        border: 2px solid #1b1f29;
+        border: 2px solid $black2;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 4px;
@@ -61,7 +61,8 @@
         &:hover,
         &:active {
             background-color: $white;
-            color: #1b1f29;
+            color: $black2;
+            border-color: $black2;
         }
     }
 }

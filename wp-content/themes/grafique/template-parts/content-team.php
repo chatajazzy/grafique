@@ -4,6 +4,13 @@
 $team_section_title = get_field('team_section_title');
 $team_section_subtitle_thin = get_field('team_section_subtitle_thin');
 $team_section_subtitle_bold = get_field('team_section_subtitle_bold');
+$teamMembers = new WP_Query(
+    array(
+        'post_type' => 'team_members',
+        'order_by' => 'post_id',
+        'order' => 'ASC',
+    )
+)
 ?>
 <section class="section team" id="team">
     <div class="container">
@@ -19,15 +26,7 @@ $team_section_subtitle_bold = get_field('team_section_subtitle_bold');
                     <?=$team_section_subtitle_bold?>
                 </p>
             </header>
-            <?php
-$teamMembers = new WP_Query(
-    array(
-        'post_type' => 'team_members',
-        'order_by' => 'post_id',
-        'order' => 'ASC',
-    )
-)
-?>
+           
             <?php while ($teamMembers->have_posts()): $teamMembers->the_post()?>
                     <div class="team__member col-sm-12 col-md-4">
                         <img src="<?=get_field('team_member_image')['url']?>" alt="<?=get_field('team_member_image')['alt']?>">

@@ -15,6 +15,9 @@
     &__copyright-link {
         color: $blue;
         transition: all 0.3s ease-in-out;
+        &:visited {
+            color: $blue;
+        }
         &:hover,
         &:active {
             color: $white;
