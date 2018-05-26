@@ -5,21 +5,31 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 		<section class="blog-section">
-			<div class="container">
-					<header>
-							<h2 class="blog-section__title">Blog</h2>
-							<?= is_home() ? 'true': 'false'; ?>
-							<?= is_front_page() ? 'true': 'false'; ?>
-					</header>
+			<div class="entry-header__info">
+				<div class="container">
+
+					<h3 class="entry-title entry-title--top">
+						Blog
+					</h3>
+					<?php
+if (function_exists('yoast_breadcrumb')) {
+    yoast_breadcrumb('
+<p id="breadcrumbs" class="breadcrumbs">', '</p>
+');
+}
+?>				</div>
+			</div>
+											<div class="container">
+
 					<?php
 if (have_posts()):
     $index = 2;
     if (is_home() && !is_front_page()):
     ?>
-					<header>
-						<h1 class="page-title screen-reader-text"><?php single_post_title();?></h1>
-					</header>
-					<?php
+									<header>
+										<h1 class="page-title screen-reader-text"><?php single_post_title();?></h1>
+									</header>
+									<?php
 endif;
 
 /* Start the Loop */

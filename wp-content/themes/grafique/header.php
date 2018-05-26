@@ -9,7 +9,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
-			
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600,800" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
@@ -24,7 +24,9 @@
 
 
 <body>
-    <header class="header <?= (is_home() && !is_front_page()) ? 'header--blog' : '' ?>">
+    <header class="header <?=(!is_front_page()) ? 'header--blog' : ''?>">
+
+<?php get_search_form(); ?>
         <div class="mobile-nav">
             <div class="container">
                 <button class="mobile-nav__trigger">
@@ -34,6 +36,7 @@
                 </button>
                 <div class="mobile-nav__search">
                     <i class="fas fa-search"></i>
+                   
                 </div>
 						</div>
 						<?php
@@ -50,7 +53,7 @@ wp_nav_menu(
         <div class="container">
             <div class="header__content">
                 <div class="logo">
-                    <a href="#" class="logo__link">
+                    <a href="<?=esc_url(home_url('/'));?>" class="logo__link">
                         <img src="<?php bloginfo('stylesheet_directory')?>/img/invert-logo.png" alt="Grafique logo" class="logo__img">
                     </a>
                     <span class="logo__text">Architect</span>
@@ -85,7 +88,6 @@ wp_nav_menu(
 ?>
             <div class="nav__search">
                 <i class="fas fa-search"></i>
-
             </div>
             <ul class="socials socials--desktop">
                 <li class="socials__item">
