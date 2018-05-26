@@ -1,14 +1,3 @@
-<?php
-/**
- * Template part for displaying posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package grafique
- */
-
-?>
-
 <article class="col-sm-12 col-md-6 post" id="post-<?php the_ID();?>" <?php post_class();?>>
 <figure class="post-thumbnail">
                             <a href="<?= esc_url(get_permalink())?>" class="post-thumbnail__link">

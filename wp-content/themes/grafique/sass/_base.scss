@@ -17,6 +17,7 @@ body {
     position: relative;
 }
 
+ol,
 ul,
 li {
     margin: 0;
@@ -33,6 +34,39 @@ a {
     &:active {
         text-decoration: none;
     }
+}
+
+h2 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.434;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0em;
+    text-align: inherit;
+    color: $gray;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.375;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0em;
+    text-align: inherit;
+    color: $gray;
+}
+
+h5 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.44;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0em;
+    text-align: inherit;
+    color: #27bfe7;
 }
 
 .baguetteBox-button#next-button,

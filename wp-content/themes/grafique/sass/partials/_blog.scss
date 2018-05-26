@@ -1,9 +1,7 @@
 .blog-section {
-    // position: relative;
-    // top: 100px; 
-    padding: 300px 0 100px;
+    padding: 250px 0 100px;
     @include min-screen($bp-l) {
-        padding: 150px 0;
+        padding: 90px 0;
     }
     &__title {
         font-size: 24px;
@@ -19,7 +17,10 @@
 }
 
 .post {
-    text-align: center;
+    text-align: center; // padding: 300px 0 100px;
+    // @include min-screen($bp-l) {
+    //     padding: 150px 0;
+    // }
     &__date {
         text-transform: uppercase;
     }
@@ -129,7 +130,9 @@
     }
 }
 
-.post-thumbnail__img {
+.post-thumbnail__img,
+.wp-post-image,
+.post-view img {
     border-radius: 6px;
 }
 
@@ -163,5 +166,107 @@
         top: -2px;
         color: #bebebf;
         transition: all 0.3s ease-in-out;
+    }
+}
+
+.entry-header {
+    &__info {
+        background-color: #f6f6f6;
+        padding: 25px 0;
+        margin-bottom: 50px;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            flex-wrap: wrap;
+        }
+        .entry-title {
+            &--top {
+                color: $blue;
+            }
+        }
+    }
+}
+
+.post-author-bio {
+    margin-top: 50px;
+    position: relative;
+    padding-top: 33px;
+    padding-bottom: 32px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #e8e8e8;
+    font-size: 16px;
+    color: $light-gray;
+}
+
+.post-author__holder {
+    position: relative;
+    z-index: 2;
+    display: flex;
+}
+
+.post-author__avatar {
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+    .avatar {
+        border-radius: 50%;
+    }
+}
+
+.post-author__super-title {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.44;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0em;
+    text-align: inherit;
+    color: #27bfe7;
+    text-transform: uppercase;
+}
+
+.navigation {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #e8e8e8;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a {
+        font-weight: 600;
+        font-size: 13px;
+        font-family: Montserrat, sans-serif;
+        color: $white;
+        background-color: $blue;
+        line-height: 2;
+        display: inline-block;
+        max-width: 100%;
+        padding: 11px 32px;
+        cursor: pointer;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: top;
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+        &:visited {
+            color: $white;
+        }
+        &:hover,
+        &:active {
+            background-color: $gray;
+        }
+    }
+    .nav-previous {
+        padding-right: 15px;
     }
 }

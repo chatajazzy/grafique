@@ -1,0 +1,52 @@
+.post-view {
+    .post {
+        padding: 235px 0;
+        text-align: left;
+        @include min-screen($bp-l) {
+            padding: 75px 0;
+        }
+    }
+    .page-title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1.375;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0em;
+        color: $blue;
+    }
+    .breadcrumbs__items {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .breadcrumbs__item,
+    .breadcrumbs__item a {
+        display: inline-block;
+        color: #8d8d8d;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.75;
+        font-family: Raleway, sans-serif;
+        letter-spacing: 0em;
+        text-transform: uppercase;
+    }
+    .post__date {
+        display: inline-block;
+    }
+    .entry-title {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.434;
+        font-family: Montserrat, sans-serif;
+        letter-spacing: 0em;
+        text-align: inherit;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .entry-content p {
+        line-height: 26px;
+        margin: 25px 0;
+    }
+}
