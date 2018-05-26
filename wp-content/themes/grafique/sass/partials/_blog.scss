@@ -1,8 +1,8 @@
 .blog-section {
-    padding: 250px 0 100px;
-    @include min-screen($bp-l) {
-        padding: 90px 0;
-    }
+    // padding: 250px 0 100px;
+    // @include min-screen($bp-l) {
+    //     padding: 90px 0;
+    // }
     &__title {
         font-size: 24px;
         font-style: normal;

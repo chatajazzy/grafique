@@ -1,17 +1,3 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package grafique
- */
-
-?>
-
-
  <footer class="footer">
         <div class="container">
             <div class="row">
@@ -47,6 +33,8 @@
                 </ul>
             </div>
         </div>
+        <a href="#header" id="toTop" class="to-top-btn"><i class="fa fa-chevron-up" aria-hidden="true"></i>
+</a>
 		</footer>
 
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -58,11 +46,6 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfrzx3QTPX5VkmDSOfavaVEYRHnu-Ki3s"></script>
     <script>
-        $('.achievements__item-number').each(function () {
-
-            $(this).countTo();
-        })
-
         function initialize() {
             var mapCanvas = document.getElementById('google-maps');
             var mapOptions = {
@@ -245,9 +228,10 @@
                 map.setCenter(marker.getPosition());
             });
         }
-        google.maps.event.addDomListener(window, 'load', initialize);
-
-        window.onload = function () {
+        google.maps.event.addDomListener(window, 'load', function() {
+            var isFrontPage = <?=(is_front_page()) ? 'true' : 'false'?>;
+            if (isFrontPage) {
+            initialize()
             var slider = tns({
                 container: '.hero-slider',
                 "items": 1,
@@ -261,7 +245,8 @@
                 "captions": false,
                 "async": true
             });
-        }
+            }
+        });
     </script>
     <script>
 
@@ -280,6 +265,29 @@
             document.querySelector('.mobile-nav__search').addEventListener('click',
             toggleSearch, false);
 
+            function updateFab() {
+                var fabBtn = document.getElementById('toTop');
+
+                if (window.pageYOffset > document.querySelector('.header').offsetTop + 200) {
+                    fabBtn.style.display = 'block';
+                }
+                else {
+                    fabBtn.style.display = 'none';
+                }
+            }
+
+            function startAchievements() {
+                var breakingEl = document.querySelector('.about')
+                if (breakingEl && window.pageYOffset > breakingEl.offsetTop - 200) {
+                    $('.achievements__item-number').each(function() {
+                        $(this).countTo();
+                    })
+                }
+            }
+            document.addEventListener('scroll', function() {
+                updateFab();
+                startAchievements();
+            }, false);
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

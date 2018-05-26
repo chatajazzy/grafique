@@ -29,9 +29,9 @@
 
 
 <body>
-    <header class="header <?=(!is_front_page()) ? 'header--blog' : ''?>">
+    <header id="header" class="header <?=(!is_front_page()) ? 'header--blog' : ''?>">
 
-<?php get_search_form(); ?>
+<?php get_search_form();?>
         <div class="mobile-nav">
             <div class="container">
                 <button class="mobile-nav__trigger">

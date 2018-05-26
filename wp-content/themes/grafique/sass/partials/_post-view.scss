@@ -1,11 +1,4 @@
 .post-view {
-    .post {
-        padding: 235px 0;
-        text-align: left;
-        @include min-screen($bp-l) {
-            padding: 75px 0;
-        }
-    }
     .page-title {
         font-size: 24px;
         font-style: normal;
@@ -42,8 +35,6 @@
         font-family: Montserrat, sans-serif;
         letter-spacing: 0em;
         text-align: inherit;
-        margin-top: 15px;
-        margin-bottom: 10px;
     }
     .entry-content p {
         line-height: 26px;
