@@ -15,7 +15,12 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css">
-	<?php wp_head();?>
+    <?php wp_head();?>
+    <style>
+    html {
+    margin-top: 0 !important;
+}
+    </style>
 </head>
 
 <body <?php body_class();?>>
@@ -36,7 +41,6 @@
                 </button>
                 <div class="mobile-nav__search">
                     <i class="fas fa-search"></i>
-                   
                 </div>
 						</div>
 						<?php

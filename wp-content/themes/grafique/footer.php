@@ -277,7 +277,8 @@
             document.querySelector('.search-form__close').addEventListener('click', toggleSearch, false);
             document.querySelector('.nav__search').addEventListener('click',
             toggleSearch, false);
-
+            document.querySelector('.mobile-nav__search').addEventListener('click',
+            toggleSearch, false);
 
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

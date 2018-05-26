@@ -3,7 +3,6 @@
     position: relative;
     &--is-open {
         .mobile-nav__trigger {
-            color: red;
             outline: none;
         }
         .mobile-nav__bar {
@@ -47,7 +46,8 @@
         position: absolute;
         transition: all 0.2s ease;
         width: 25px;
-        margin: 5px auto;
+        margin: 2px auto;
+        height: 3px;
         &:nth-child(1) {
             top: 12px;
         }
