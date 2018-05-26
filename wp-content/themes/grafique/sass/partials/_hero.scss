@@ -7,7 +7,6 @@
         margin: auto;
         z-index: 2;
         button {
-            background: red;
             width: 50px;
         }
     }
@@ -91,16 +90,5 @@
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-.projects {
-    &__grid {
-        margin-top: 100px;
-    }
-    &__grid-item {
-        &:hover {
-            opacity: 0.5;
-        }
     }
 }

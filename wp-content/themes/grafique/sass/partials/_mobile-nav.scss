@@ -5,19 +5,10 @@
         .mobile-nav__trigger {
             outline: none;
         }
-        .mobile-nav__bar {
-            background: $blue;
-            &:nth-child(1) {
-                transform: rotate3d(0, 0, 1, 45deg);
-                top: 20px;
-            }
-            &:nth-child(2) {
-                display: none;
-            }
-            &:nth-child(3) {
-                transform: rotate3d(0, 0, 1, -45deg);
-                top: 20px;
-            }
+        .search-form__close--nav {
+            display: block;
+            opacity: 0;
+            animation: 1s fadeInOpacity ease-in 1 forwards 0.25s;
         }
     }
     &__search {
@@ -57,42 +48,11 @@
     }
 }
 
-.to-top-btn {
-    display: none;
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    background-color: $blue;
-    color: $white;
-    overflow: hidden;
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-    animation: 1s fadeIn ease-in 1 forwards 0.25s;
-    &:visited {
-        color: $white;
-    }
-    &:hover,
-    &:active {
-        color: $white;
-        background-color: $light-gray;
-    }
-    i {
-        margin-top: 12px;
-    }
-}
-
-@keyframes fadeIn {
+@keyframes fadeInOpacity {
     from {
         opacity: 0;
-        transform: translateY(30px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
     }
 }

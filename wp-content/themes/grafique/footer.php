@@ -250,11 +250,10 @@
     </script>
     <script>
 
-        document.querySelector('.mobile-nav__trigger').addEventListener('click',
-            function () {
+        document.querySelector('.mobile-nav__trigger').addEventListener('click', toggleNav, false);
+            function toggleNav() {
                 document.querySelector('.mobile-nav').classList.toggle('mobile-nav--is-open');
-            }, false);
-
+            }
             function toggleSearch() {
                 document.querySelector('.search-form').classList.toggle('search-form--is-open');
             }
@@ -264,6 +263,12 @@
             toggleSearch, false);
             document.querySelector('.mobile-nav__search').addEventListener('click',
             toggleSearch, false);
+            document.querySelector('.search-form__close--nav').addEventListener('click', toggleNav, false);
+
+            document.querySelectorAll('.menu-item a').forEach(function(item) {
+            item.addEventListener('click', toggleNav, false);
+            });
+
 
             function updateFab() {
                 var fabBtn = document.getElementById('toTop');

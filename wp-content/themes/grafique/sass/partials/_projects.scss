@@ -1,0 +1,10 @@
+.projects {
+    &__grid {
+        margin-top: 100px;
+    }
+    &__grid-item {
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

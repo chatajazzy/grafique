@@ -48,6 +48,16 @@
         &:hover {
             color: $blue;
         }
+        &--nav {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            opacity: 0;
+            @include min-screen(576px) {
+                left: 20px;
+            }
+        }
     }
     &__submit {
         border: 0;

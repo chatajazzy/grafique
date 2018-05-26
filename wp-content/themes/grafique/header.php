@@ -42,7 +42,7 @@
                 <div class="mobile-nav__search">
                     <i class="fas fa-search"></i>
                 </div>
-						</div>
+			</div>
 						<?php
 wp_nav_menu(
     array(
@@ -53,6 +53,10 @@ wp_nav_menu(
     )
 );
 ?>
+<div class="container">
+    <span class="search-form__close search-form__close--nav"><i class="fa fa-times" aria-hidden="true"></i>
+    </span>
+</div>
         </div>
         <div class="container">
             <div class="header__content">
