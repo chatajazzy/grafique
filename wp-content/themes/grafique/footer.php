@@ -269,7 +269,16 @@
             item.addEventListener('click', toggleNav, false);
             });
 
+            function pagePreloaderInit() {
+                var preloader = $('.page-preloader-cover')
+                if (preloader) {
+                    preloader.delay(750).fadeTo(750, 0, function() {
+                        preloader.remove();
+                    });
+                }
+            }
 
+            pagePreloaderInit();
             function updateFab() {
                 var fabBtn = document.getElementById('toTop');
 
