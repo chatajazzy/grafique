@@ -48,11 +48,11 @@
             </div>
         </div>
 		</footer>
-		
+
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script>
             <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.helper.ie8.js"></script><![endif]-->
-                
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 
@@ -270,7 +270,16 @@
                 document.querySelector('.mobile-nav').classList.toggle('mobile-nav--is-open');
             }, false);
 
-    
+            function toggleSearch() {
+                document.querySelector('.search-form').classList.toggle('search-form--is-open');
+            }
+            // handle search form show/hide
+            document.querySelector('.search-form__close').addEventListener('click', toggleSearch, false);
+            document.querySelector('.nav__search').addEventListener('click',
+            toggleSearch, false);
+
+
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
