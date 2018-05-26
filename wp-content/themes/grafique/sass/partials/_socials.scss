@@ -17,9 +17,14 @@
     }
     &--footer {
         display: flex;
-        max-width: 90px;
+        max-width: 75px;
         margin: 0;
         padding-right: 0;
+        padding-left: 0;
+        @include min-screen($bp-l) {
+            max-width: 90px;
+            padding-left: 15px;
+        }
     }
     .fab {
         color: $white;

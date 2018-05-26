@@ -1,4 +1,4 @@
-<form class="col-sm-12 col-md-8 col-md contact__form">
+<form class="col-sm-12 col-md-8 contact__form">
     <header class="text-center col-sm-12 contact__form-header">
         <p class="section__subtitle">Ask</p>
         <p class="section__subtitle section__subtitle--bold">a question</p>

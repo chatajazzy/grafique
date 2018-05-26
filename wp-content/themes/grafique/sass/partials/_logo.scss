@@ -1,5 +1,4 @@
 .logo {
-    padding: 20px;
     @include min-screen($bp-l) {
         padding: 0;
         display: flex;
@@ -14,7 +13,6 @@
         text-align: center;
     }
     &__link {
-        margin: 25px 0 15px;
         @include min-screen($bp-l) {
             margin: 20px 0;
         }

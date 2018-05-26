@@ -35,12 +35,19 @@
     }
     &__text {
         text-transform: uppercase;
-        font-size: 50px;
+        font-size: 25px;
         line-height: 1em;
+        @include min-screen($bp-m) {
+            font-size: 50px;
+        }
         &:nth-of-type(2) {
-            font-size: 20px;
+            font-size: 12px;
             font-weight: 400;
             letter-spacing: 44.5px;
+            line-height: 2;
+            @include min-screen($bp-m) {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -72,9 +79,12 @@
     &__nav-bar {
         display: block;
         height: 1px;
-        width: 55px;
+        width: 45px;
         background-color: rgba(255, 255, 255, 0.3);
         cursor: pointer;
+        @include min-screen($bp-m) {
+            width: 55px;
+        }
         &.tns-nav-active {
             height: 10px;
             background-color: $white;

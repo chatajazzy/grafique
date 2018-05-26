@@ -65,4 +65,10 @@
             border-color: $black2;
         }
     }
+    &__info {
+        margin-top: 50px;
+        @include min-screen($bp-m) {
+            margin-top: 0;
+        }
+    }
 }
