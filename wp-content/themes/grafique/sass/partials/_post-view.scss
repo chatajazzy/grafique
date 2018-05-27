@@ -36,8 +36,17 @@
         letter-spacing: 0em;
         text-align: inherit;
     }
-    .entry-content p {
-        line-height: 26px;
-        margin: 25px 0;
+    .entry-content {
+        p {
+            line-height: 26px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        .entry-title {
+            margin-bottom: 25px;
+        }
+    }
+    .entry-header.entry-meta {
+        text-align: left;
     }
 }
