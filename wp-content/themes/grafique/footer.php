@@ -37,13 +37,6 @@
 </a>
 		</footer>
 
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script>
-            <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.helper.ie8.js"></script><![endif]-->
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/min/tiny-slider.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfrzx3QTPX5VkmDSOfavaVEYRHnu-Ki3s"></script>
     <script>
         function initialize() {
@@ -228,6 +221,7 @@
                 map.setCenter(marker.getPosition());
             });
         }
+
         google.maps.event.addDomListener(window, 'load', function() {
             var isFrontPage = <?=(is_front_page()) ? 'true' : 'false'?>;
             if (isFrontPage) {
@@ -247,71 +241,6 @@
             });
             }
         });
-    </script>
-    <script>
-
-        document.querySelector('.mobile-nav__trigger').addEventListener('click', toggleNav, false);
-            function toggleNav() {
-                document.querySelector('.mobile-nav').classList.toggle('mobile-nav--is-open');
-            }
-            function toggleSearch() {
-                document.querySelector('.search-form').classList.toggle('search-form--is-open');
-            }
-            // handle search form show/hide
-            document.querySelector('.search-form__close').addEventListener('click', toggleSearch, false);
-            document.querySelector('.nav__search').addEventListener('click',
-            toggleSearch, false);
-            document.querySelector('.mobile-nav__search').addEventListener('click',
-            toggleSearch, false);
-            document.querySelector('.search-form__close--nav').addEventListener('click', toggleNav, false);
-
-            document.querySelectorAll('.menu-item a').forEach(function(item) {
-            item.addEventListener('click', toggleNav, false);
-            });
-
-            function pagePreloaderInit() {
-                var preloader = $('.page-preloader-cover')
-                if (preloader) {
-                    preloader.delay(750).fadeTo(750, 0, function() {
-                        preloader.remove();
-                    });
-                }
-            }
-
-            pagePreloaderInit();
-            function updateFab() {
-                var fabBtn = document.getElementById('toTop');
-
-                if (window.pageYOffset > document.querySelector('.header').offsetTop + 200) {
-                    fabBtn.style.display = 'block';
-                }
-                else {
-                    fabBtn.style.display = 'none';
-                }
-            }
-
-            function startAchievements() {
-                var breakingEl = document.querySelector('.about')
-                if (breakingEl && window.pageYOffset > breakingEl.offsetTop - 200) {
-                    $('.achievements__item-number').each(function() {
-                        $(this).countTo();
-                    })
-                }
-            }
-            document.addEventListener('scroll', function() {
-                updateFab();
-                startAchievements();
-            }, false);
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
     </script>
 </body>
 </html>
