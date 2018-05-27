@@ -12,8 +12,9 @@
         @include min-screen($bp-l) {
             display: block;
             border-right: 1px solid rgba(255, 255, 255, 0.3);
-            margin-right: 25px;
-            padding-right: 25px;
+            padding: 5px 25px 5px 0;
+            font-size: 14px;
+            margin: 0 25px 0 15px;
         }
     }
     &--mobile-menu {
@@ -42,6 +43,9 @@
         }
         .container {
             display: block;
+            &:first-of-type {
+                background-color: rgba(17, 17, 17, 0.98);
+            }
         }
     }
 }

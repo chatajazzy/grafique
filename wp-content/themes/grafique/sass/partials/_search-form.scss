@@ -51,12 +51,18 @@
         &--nav {
             display: none;
             position: absolute;
-            top: 0;
+            top: -15px;
             left: 30px;
             opacity: 0;
             @include min-screen(576px) {
                 left: 10px;
             }
+        }
+    }
+    &__input-wrap {
+        max-width: 200px;
+        @include min-screen($bp-l) {
+            max-width: 400px;
         }
     }
     &__submit {

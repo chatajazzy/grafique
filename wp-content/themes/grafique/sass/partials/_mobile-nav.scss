@@ -23,6 +23,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 15px;
+        &:last-of-type {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
     &__trigger {
         border: 0;

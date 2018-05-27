@@ -19,19 +19,26 @@
     }
     &__img {
         min-height: 100vh;
-        @include min-screen(1024px) {
+        @include min-screen($bp-l) {
             min-width: 100%;
             max-height: 100vh;
         }
     }
     &__text-box {
         position: absolute;
-        top: 50%;
+        top: 40%;
         margin: auto;
         z-index: 2;
         color: $white;
         opacity: 0;
         max-width: 350px;
+        @include landscape() {
+            top: 30%;
+        }
+        @include min-screen($bp-l) {
+            margin-left: -15px;
+            top: 50%;
+        }
     }
     &__text {
         text-transform: uppercase;
@@ -43,10 +50,11 @@
         &:nth-of-type(2) {
             font-size: 12px;
             font-weight: 400;
-            letter-spacing: 44.5px;
             line-height: 2;
+            letter-spacing: 14.5px;
             @include min-screen($bp-m) {
                 font-size: 20px;
+                letter-spacing: 44.5px;
             }
         }
     }
@@ -60,6 +68,9 @@
         bottom: 50px;
         z-index: 1;
         align-items: center;
+        @include min-screen($bp-l) {
+            margin-left: -15px;
+        }
     }
     &__nav-item {
         height: 50px;
