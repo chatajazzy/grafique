@@ -1,10 +1,22 @@
+// Colors
 $black: #19191a;
 $black2: #1b1f29;
+$black3: rgba(17, 17, 17, 0.98);
 $white: #ffffff;
 $blue: #27bfe7;
 $light-gray: #8d8d8d;
 $light-gray2: #909295;
+$light-gray3: #e8e8e8;
+$light-gray4: rgba(255, 255, 255, 0.3);
 $gray: #515151;
+// Breakpoints
 $bp-m: 768px;
 $bp-l: 1024px;
 $bp-xl: 1200px;
+// Fonts
+$font-primary: 'Montserrat',
+sans-serif;
+$font-secondary:'Raleway',
+sans-serif;
+// Other
+$basic-transition: all 0.3s ease-in-out;

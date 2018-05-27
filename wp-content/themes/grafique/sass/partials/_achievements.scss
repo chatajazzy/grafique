@@ -1,9 +1,9 @@
 .achievements {
-    background-color: #1b1f29;
+    background-color: $black2;
     padding: 60px 0 30px;
     text-align: center;
     h2 {
-        color: rgba(255, 255, 255, 0.3);
+        color: $light-gray4;
     }
     &__item {
         color: $white;

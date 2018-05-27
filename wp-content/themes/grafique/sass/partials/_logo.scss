@@ -27,7 +27,7 @@
         font-size: 14px;
         padding-top: 10px;
         @include min-screen($bp-l) {
-            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            border-left: 1px solid $light-gray4;
             margin-left: 25px;
             padding: 5px 0 5px 25px;
         }

@@ -11,7 +11,7 @@
         cursor: pointer;
         @include min-screen($bp-l) {
             display: block;
-            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid $light-gray4;
             padding: 5px 25px 5px 0;
             font-size: 14px;
             margin: 0 25px 0 15px;
@@ -29,7 +29,7 @@
         margin: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(17, 17, 17, 0.98);
+        background-color: $black3;
         transform: translateX(-100%);
         transition: transform 0.2s linear, -webkit-transform .2s linear;
         .mobile-nav--is-open & {
@@ -44,7 +44,7 @@
         .container {
             display: block;
             &:first-of-type {
-                background-color: rgba(17, 17, 17, 0.98);
+                background-color: $black3;
             }
         }
     }
@@ -55,11 +55,11 @@
     a {
         line-height: 1.6;
         color: $white;
-        transition: all 0.3s ease-in-out;
+        transition: $basic-transition;
         font-weight: 600;
         font-size: 16px;
         line-height: 1.643;
-        font-family: Raleway, sans-serif;
+        font-family: $font-secondary;
         &:visited {
             color: $white;
         }

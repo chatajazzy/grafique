@@ -4,7 +4,7 @@
         font-style: normal;
         font-weight: 800;
         line-height: 1.375;
-        font-family: 'Montserrat', sans-serif;
+        font-family: $font-primary;
         letter-spacing: 0em;
         color: $blue;
     }
@@ -15,12 +15,12 @@
     .breadcrumbs__item,
     .breadcrumbs__item a {
         display: inline-block;
-        color: #8d8d8d;
+        color: $light-gray;
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
         line-height: 1.75;
-        font-family: Raleway, sans-serif;
+        font-family: $font-secondary;
         letter-spacing: 0em;
         text-transform: uppercase;
     }
@@ -32,7 +32,7 @@
         font-weight: 800;
         font-size: 18px;
         line-height: 1.434;
-        font-family: Montserrat, sans-serif;
+        font-family: $font-primary;
         letter-spacing: 0em;
         text-align: inherit;
     }

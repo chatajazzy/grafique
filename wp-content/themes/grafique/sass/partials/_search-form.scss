@@ -43,7 +43,7 @@
         top: 30px;
         right: 30px;
         color: $white;
-        transition: all 0.3s ease-in-out;
+        transition: $basic-transition;
         &:active,
         &:hover {
             color: $blue;
@@ -71,7 +71,7 @@
         font-size: 30px;
         padding: 0;
         color: $blue;
-        transition: all 0.3s ease-in-out;
+        transition: $basic-transition;
         &:active,
         &:hover {
             color: $white;

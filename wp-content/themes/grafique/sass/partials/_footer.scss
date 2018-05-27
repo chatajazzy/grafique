@@ -14,7 +14,7 @@
     }
     &__copyright-link {
         color: $blue;
-        transition: all 0.3s ease-in-out;
+        transition: $basic-transition;
         &:visited {
             color: $blue;
         }

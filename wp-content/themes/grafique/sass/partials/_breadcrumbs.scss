@@ -5,7 +5,7 @@
     margin: 0;
     a {
         color: $light-gray;
-        transition: all 0.3s ease-in-out;
+        transition: $basic-transition;
         &:visited {
             color: $light-gray;
             ;
