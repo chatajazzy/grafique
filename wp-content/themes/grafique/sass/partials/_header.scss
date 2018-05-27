@@ -15,10 +15,8 @@
     &--blog {
         background-color: $black;
         +.content-area {
-            padding-top: 275px;
             padding-bottom: 100px;
             @include min-screen($bp-l) {
-                padding-top: 250px;
                 padding-top: 90px;
             }
         }
