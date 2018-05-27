@@ -26,7 +26,10 @@
         }
     }
     &__form {
-        margin: 100px 0;
+        margin: 50px 0 10px 0;
+        @include min-screen($bp-l) {
+            margin: 100px 0 40px;
+        }
     }
     &__form-header {
         margin-bottom: 50px;
@@ -68,7 +71,7 @@
     &__info {
         margin-top: 50px;
         @include min-screen($bp-m) {
-            margin-top: 0;
+            margin: 0 0 0 25px;
         }
     }
 }

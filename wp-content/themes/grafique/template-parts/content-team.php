@@ -15,14 +15,14 @@ $teamMembers = new WP_Query(
 <section class="section team" id="team">
     <div class="container">
         <div class="row">
-            <header class="text-sm-center text-md-left col-sm-12 col-md-4">
-                <h2 class="section__header">
+            <header class="col-sm-12 col-md-4">
+                <h2 class="text-sm-center text-md-left section__header">
                     <?=$team_section_title?>
                 </h2>
-                <p class="section__subtitle">
+                <p class="text-sm-center text-md-left section__subtitle">
                     <?=$team_section_subtitle_thin?>
                 </p>
-                <p class="section__subtitle section__subtitle--bold section__subtitle--small">
+                <p class="text-sm-center text-md-left section__subtitle section__subtitle--bold section__subtitle--small">
                     <?=$team_section_subtitle_bold?>
                 </p>
             </header>

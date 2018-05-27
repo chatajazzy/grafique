@@ -1,6 +1,6 @@
 .achievements {
     background-color: #1b1f29;
-    padding: 90px 0 69px 0;
+    padding: 60px 0 30px;
     text-align: center;
     h2 {
         color: rgba(255, 255, 255, 0.3);
@@ -17,8 +17,10 @@
     }
     &__item-number {
         font-weight: 800;
+        margin-bottom: 5px;
     }
     &__item-text {
         font-weight: 200;
+        margin-bottom: 0;
     }
 }

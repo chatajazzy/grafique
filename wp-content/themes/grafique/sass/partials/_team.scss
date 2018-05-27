@@ -1,4 +1,19 @@
 .team {
+    .section__header {
+        margin-top: 20px;
+    }
+    &__member {
+        margin-top: 10px;
+        &:first-of-type {
+            margin-top: 25px;
+            @include min-screen($bp-m) {
+                margin-top: 20px;
+            }
+        }
+        @include min-screen($bp-m) {
+            margin-top: 20px;
+        }
+    }
     &__member-name {
         line-height: 1.2em;
         color: #1b1f29;

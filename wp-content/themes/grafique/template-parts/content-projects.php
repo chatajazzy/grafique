@@ -30,8 +30,9 @@ $projects = new WP_Query(
 		                <div class="row no-gutters">
 		            <?php endif;?>
             <li class="col-sm-12 col-md-6 col-lg-4 projects__grid-item">
-                <a href="<?=the_post_thumbnail_url()?>">
+                <a href="<?=the_post_thumbnail_url()?>" class="projects__grid-item-link">
                     <img class="projects__photo" src="<?=the_post_thumbnail_url()?>" alt="cos">
+                    <i class="fas fa-search"></i>
                 </a>
             </li>
             <?php if ($index == 2 || $index == 5): ?>
