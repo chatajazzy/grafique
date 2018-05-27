@@ -1,8 +1,4 @@
 .blog-section {
-    // padding: 250px 0 100px;
-    // @include min-screen($bp-l) {
-    //     padding: 90px 0;
-    // }
     &__title {
         font-size: 24px;
         font-style: normal;
@@ -17,10 +13,13 @@
 }
 
 .post {
-    text-align: center; // padding: 300px 0 100px;
-    // @include min-screen($bp-l) {
-    //     padding: 150px 0;
-    // }
+    text-align: center;
+    &:nth-child(odd) {
+        padding-left: 0;
+    }
+    &:nth-child(even) {
+        padding-right: 0;
+    }
     &__date {
         text-transform: uppercase;
     }
@@ -178,8 +177,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 10px;
             flex-wrap: wrap;
+            padding: 0;
         }
         .entry-title {
             &--top {
