@@ -2408,8 +2408,8 @@ function posts_nav_link( $sep = '', $prelabel = '', $nxtlabel = '' ) {
  */
 function get_the_post_navigation( $args = array() ) {
 	$args = wp_parse_args( $args, array(
-		'prev_text'          => '%title',
-		'next_text'          => '%title',
+		'prev_text'          => 'Prev',
+		'next_text'          => 'Next',
 		'in_same_term'       => false,
 		'excluded_terms'     => '',
 		'taxonomy'           => 'category',

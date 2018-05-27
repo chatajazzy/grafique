@@ -238,6 +238,12 @@
         justify-content: space-between;
         align-items: center;
     }
+    .nav-next {
+        margin-left: auto;
+    }
+    .nav-previous {
+        margin-right: auto;
+    }
     a {
         font-weight: 600;
         font-size: 13px;
