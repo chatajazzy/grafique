@@ -105,7 +105,7 @@ add_action('after_setup_theme', 'grafique_content_width', 0);
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
+ */ 
 function grafique_widgets_init()
 {
     register_sidebar(array(

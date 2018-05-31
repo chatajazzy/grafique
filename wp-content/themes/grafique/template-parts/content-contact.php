@@ -1,4 +1,3 @@
-
 <section class="section contact" id="contact">
     <div class="row">
         <div class="col-sm-12 col-md-7 contact__map" id="google-maps"></div>
@@ -17,7 +16,7 @@
     </div>
     <div class="container">
         <div class="row justify-content-md-center">
-            <?php get_template_part('template-parts/content', 'contact-form');?>
+            <?php get_template_part('template-parts/content', 'contact-form'); ?>
         </div>
     </div>
 </section>
