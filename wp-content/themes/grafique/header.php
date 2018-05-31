@@ -61,15 +61,26 @@
                     <i class="fas fa-search"></i>
                 </div>
 			</div>
-						<?php
-wp_nav_menu(
-    array(
-        'theme_location' => 'primary',
-        'container' => 'nav',
-        'container_class' => 'nav nav--mobile-menu',
-        'menu_class' => 'container',
-    )
-);
+                        <?php
+if (is_front_page()) {
+    wp_nav_menu(
+        array(
+            'theme_location' => 'primary',
+            'container' => 'nav',
+            'container_class' => 'nav nav--mobile-menu',
+            'menu_class' => 'container',
+        )
+    );
+} else {
+    wp_nav_menu(
+        array(
+            'theme_location' => 'menu-2',
+            'container' => 'nav',
+            'container_class' => 'nav nav--mobile-menu',
+            'menu_class' => 'container',
+        )
+    );
+}
 ?>
 <div class="container">
     <span class="search-form__close search-form__close--nav"><i class="fa fa-times" aria-hidden="true"></i>
@@ -102,16 +113,29 @@ wp_nav_menu(
                     </li>
                 </ul>
             </div>
-						<?php
-wp_nav_menu(
-    array(
-        'theme_location' => 'primary',
-        'container' => '',
-        'container_class' => '',
-        'menu_class' => 'nav',
-    )
-);
+            <?php
+if (is_front_page()) {
+    wp_nav_menu(
+        array(
+            'theme_location' => 'primary',
+            'container' => '',
+            'container_class' => '',
+            'menu_class' => 'nav',
+        )
+    );
+} else {
+    wp_nav_menu(
+        array(
+            'theme_location' => 'menu-2',
+            'container' => '',
+            'container_class' => '',
+            'menu_class' => 'nav',
+        )
+
+    );
+}
 ?>
+
             <div class="nav__search">
                 <i class="fas fa-search"></i>
             </div>

@@ -23,7 +23,7 @@ if ('post' === get_post_type()):
 
 			<div class="entry-meta">
 				<header class="entry-header entry-meta">
-          
+
 
                                 <span class="post__date">
 																<a href="<?=get_day_link(get_post_time('Y'), get_post_time('m'), get_post_time('j'));?>" class="post__date-link"><?php the_time('F j, Y')?></a>
@@ -35,7 +35,7 @@ if ('post' === get_post_type()):
                                     <a href="" rel="tag"><?=the_category(', ');?></a>
                                 </span>
                             </header>
-                            
+
 
 			</div><!-- .entry-meta -->
 		<?php endif;?>
@@ -45,9 +45,7 @@ if ('post' === get_post_type()):
 <div class="entry-content">
 	<?=the_title('<h3 class="entry-title">', '</h3>')?>
     <figure class="post-thumbnail">
-                            <a href="<?=esc_url(get_permalink())?>" class="post-thumbnail__link">
-                                <img class="post-thumbnail__img" src="/wp-content/themes/grafique/img/image1.jpg" alt="cos">
-                            </a>
+    <img class="post-thumbnail__img" src="<?=has_post_thumbnail() ? the_post_thumbnail_url('large') : '';?>">
                         </figure>
 <?=the_content()?>
                             </div>
