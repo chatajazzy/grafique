@@ -1,0 +1,137 @@
+/*!
+Theme Name: grafique
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: grafique
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+grafique is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+@import "normalize";
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+@import "typography/typography";
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+@import "elements/elements";
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+@import "forms/forms";
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+@import "navigation/navigation";
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+@import "modules/accessibility";
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+@import "modules/alignments";
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+
+@import "modules/clearings";
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+@import "site/secondary/widgets";
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+@import "site/site";
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+@import "modules/infinite-scroll";
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+@import "media/media";
+/*--------------------------------------------------------------
+# Custom styles
+--------------------------------------------------------------*/
+
+@import 'media-queries';
+@import 'vars';
+@import 'base';
+@import 'partials/about';
+@import 'partials/achievements';
+@import 'partials/blog';
+@import 'partials/breadcrumbs';
+@import 'partials/contact';
+@import 'partials/header';
+@import 'partials/hero';
+@import 'partials/intro';
+@import 'partials/loader';
+@import 'partials/logo';
+@import 'partials/mobile-nav';
+@import 'partials/nav';
+@import 'partials/not-found';
+@import 'partials/post-author';
+@import 'partials/post-navigation';
+@import 'partials/post-view';
+@import 'partials/projects';
+@import 'partials/section';
+@import 'partials/search-form';
+@import 'partials/socials';
+@import 'partials/team';
+@import 'partials/to-top-btn';
+@import 'partials/footer';

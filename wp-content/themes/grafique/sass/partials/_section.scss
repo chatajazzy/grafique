@@ -1,0 +1,53 @@
+.section {
+    margin: 40px 0;
+    @include min-screen($bp-l) {
+        margin: 100px 0;
+    }
+    &__header {
+        text-transform: uppercase;
+        color: rgba(27, 31, 41, 0.3);
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 14px;
+        margin-bottom: 35px;
+        @include min-screen($bp-l) {
+            letter-spacing: 32.6px;
+        }
+        &--intro {
+            @include min-screen($bp-l) {
+                margin: 25px 0 55px 10%;
+            }
+        }
+    }
+    &__text {
+        color: $light-gray2;
+        font-size: 16px;
+        font-weight: 300;
+        &--intro {
+            @include min-screen($bp-m) {
+                flex: 1;
+            }
+        }
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: 50px;
+        line-height: 1.13em;
+        color: $black2;
+        font-weight: 200;
+        margin: 0;
+        @include min-screen($bp-l) {
+            line-height: 1em;
+        }
+        &--bold {
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        &--small {
+            font-size: 30px;
+            @include min-screen($bp-xl) {
+                font-size: 50px;
+            }
+        }
+    }
+}

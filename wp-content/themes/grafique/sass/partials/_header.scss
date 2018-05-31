@@ -1,0 +1,45 @@
+.header {
+    background-color: $black;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 5px;
+    @include min-screen($bp-l) {
+        position: absolute;
+        padding-bottom: 0;
+        background-color: transparent;
+        border-bottom: 1px solid $light-gray4;
+    }
+    &--blog {
+        background-color: $black;
+        +.content-area {
+            padding-bottom: 100px;
+            @include min-screen($bp-l) {
+                padding-top: 90px;
+            }
+        }
+    }
+    .container {
+        @include min-screen($bp-l) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+    }
+    &__content {
+        @include min-screen($bp-l) {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.mobile-header {
+    background-color: $black;
+    @include min-screen(1024px) {
+        display: none;
+    }
+}
