@@ -15,10 +15,14 @@
 .post {
     text-align: center;
     &:nth-of-type(odd) {
-        padding-left: 0;
+        @include min-screen($bp-l) {
+            padding-left: 0;
+        }
     }
     &:nth-of-type(even) {
-        padding-right: 0;
+        @include min-screen($bp-m) {
+            padding-right: 0;
+        }
     }
     &__date {
         text-transform: uppercase;
@@ -180,7 +184,9 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            padding: 0;
+            @include min-screen($bp-l) {
+                padding: 0;
+            }
         }
         .entry-title {
             &--top {
