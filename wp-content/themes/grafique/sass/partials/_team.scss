@@ -1,0 +1,33 @@
+.team {
+    .section__header {
+        margin-top: 20px;
+    }
+    &__member {
+        margin-top: 10px;
+        &:first-of-type {
+            margin-top: 25px;
+            @include min-screen($bp-m) {
+                margin-top: 20px;
+            }
+        }
+        @include min-screen($bp-m) {
+            margin-top: 20px;
+        }
+    }
+    &__member-name {
+        line-height: 1.2em;
+        color: $black2;
+        font-size: 26px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 25px 0;
+    }
+    &__member-bio {
+        color: $light-gray2;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    &__member-lastname {
+        font-weight: 600;
+    }
+}

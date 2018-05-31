@@ -1,0 +1,38 @@
+.logo {
+    @include min-screen($bp-l) {
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    &--footer {
+        padding: 0 0 5px 0;
+    }
+    &__link,
+    &__text {
+        display: block;
+        text-align: center;
+    }
+    &__link {
+        padding-top: 20px;
+        @include min-screen($bp-l) {
+            margin: 20px 0;
+            padding: 0;
+        }
+        &--footer {
+            margin: 5px;
+        }
+    }
+    &__text {
+        color: $white;
+        font-size: 14px;
+        padding-top: 10px;
+        @include min-screen($bp-l) {
+            border-left: 1px solid $light-gray4;
+            margin-left: 25px;
+            padding: 5px 0 5px 25px;
+        }
+        &--footer {
+            color: $light-gray;
+        }
+    }
+}

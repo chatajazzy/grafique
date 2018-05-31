@@ -1,0 +1,48 @@
+.navigation {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: $light-gray3;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-next {
+        margin-left: auto;
+    }
+    .nav-previous {
+        margin-right: auto;
+    }
+    a {
+        font-weight: 600;
+        font-size: 13px;
+        font-family: $font-primary;
+        color: $white;
+        background-color: $blue;
+        line-height: 2;
+        display: inline-block;
+        max-width: 100%;
+        padding: 11px 32px;
+        cursor: pointer;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: top;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border-radius: 25px;
+        transition: $basic-transition;
+        &:visited {
+            color: $white;
+        }
+        &:hover,
+        &:active {
+            background-color: $gray;
+        }
+    }
+    .nav-previous {
+        padding-right: 15px;
+    }
+}
